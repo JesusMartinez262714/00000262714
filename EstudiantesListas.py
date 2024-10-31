@@ -40,6 +40,7 @@ while True:
 
         if promedio_individual >=7:
                 aprobado+=1
+                
 
     elif opcion==2:
         contador_alumnos=0

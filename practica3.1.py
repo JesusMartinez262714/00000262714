@@ -9,6 +9,7 @@ GRAVEDAD=9.81
 TiempoSubida=0
 TiempoBajada=0
 
+
 VelocidadIncial=float(input("Ingrese la velocidad inicial metros/segundo:  "))
 AlturaDeseada=float(input("Ingrese la altura deseada en metros:   "))
 

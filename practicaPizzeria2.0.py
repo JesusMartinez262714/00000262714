@@ -38,6 +38,7 @@ costo_ingrediente3=porciones_ingrediente3*costo_porciones
 #sumatoria total
 totalApagar=costo_ingrediente1+costo_ingrediente2+costo_ingrediente3
 
+
 #Datos de salida
 print(f"""
 {"Resumen de la venta":-^45}

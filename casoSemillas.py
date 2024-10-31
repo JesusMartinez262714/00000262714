@@ -13,6 +13,7 @@ fertilizante_por_gramos = 0
 costo_Total_Costales = 0
 costo_Total_Fertilizate = 0
 
+
 # Datos de entrada
 semilla = input("Tipo de semilla maiz/trigo: ")
 calidad_semilla = input("La calidad premium/basico: ")

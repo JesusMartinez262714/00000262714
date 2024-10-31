@@ -4,6 +4,7 @@
     datos de salida:la secuencia de numero en base a n
 
 
+    
 """
 
 """

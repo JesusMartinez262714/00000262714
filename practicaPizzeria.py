@@ -20,6 +20,7 @@ costo_ingredientes = ((cantidad_ingredientes - 1) * 20 if cantidad_ingredientes 
 
 total = costo_pizza + costo_ingredientes
 
+
 tam = "Familiar" if tamanio == "F" else "Individual"
 
 

@@ -6,6 +6,7 @@ KG_CEMENTO_POR_M2=5
 KG_YESO_POR_M2=2.5
 TABLON_POR_M2=0.5
 
+
 cant_m2=float(input("ingrese cuantos metros cuadrados son"))
 "Prueba 1: 30"
 

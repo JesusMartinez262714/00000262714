@@ -16,6 +16,7 @@ print(f"""|{"":-^10}+{"":-^13}|
 |{"MES":^10}|{"CAPITAL":^13}|
 |{"":-^10}+{"":-^13}|""")
 
+
 while continuar: 
     if numeroDeMeses >0:
         if mes <= numeroDeMeses:

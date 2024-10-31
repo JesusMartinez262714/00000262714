@@ -129,6 +129,7 @@ print(f"""
 {"":_^98}
 """)
 
+
 # Mostrar la tabla de producción mensual con descuento solo si se aplicó un descuento
 if mes == "enero" or mes == "febrero":
     print(f"""
@@ -140,8 +141,8 @@ if mes == "enero" or mes == "febrero":
 {"":_^98}
 """)
 
-# 
- insumos requeridos
+ 
+ #insumos requeridos
 print(f"""
 {"Detalle de los Insumos Requeridos":-^98}
 {"Ingrediente":<28}{"Cantidad Total":<24}{"Costo Total":<24}Descuento Aplicado

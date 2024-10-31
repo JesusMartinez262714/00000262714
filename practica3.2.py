@@ -12,6 +12,7 @@ alturaMaxima=0
 tiempoVuelo=0
 Distancia=0
 
+
 #Velocidad inicial
 
 masa=float(input("Ingrese la masa total de el proyectil en kg: "))

@@ -9,6 +9,7 @@ capitalFinal=0
 numeroDeMeses=0
 
 
+
 capital_inicial=float(input('Ingrese su capital inicial a invertir: '))
 tasaInteres_Anual=float(input('ingrese el porcentaje de la tasa de interes: '))
 numeroDeMeses=int(input('Ingrese durante cuantos meses desea invertir: '))

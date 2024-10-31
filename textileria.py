@@ -193,6 +193,7 @@ while dia <=7:
                             
                     tela_cafe_falda_TallaM=tela_cafe_falda_TallaS*2
                     hilo_cafe_falda_TallaM=hilo_cafe_falda_TallaS*2
+                    
                             
                     tela_cafe_falda_TallaL=tela_cafe_falda_TallaM*1.5
                     hilo_cafe_falda_TallaL=hilo_cafe_falda_TallaM*1.5
