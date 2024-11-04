@@ -117,13 +117,21 @@ while True:
                 if sub_opcion == 1:
                     estudiantes_ordenados = sorted(listaGlobal, key=lambda estudiante: estudiante[0])  # Ordenar por nombre
                     print('Estudiantes ordenados por nombre:')
+                    print(f"""
+{"Nombre":^14}|{"Calificación 1":^18}|{"Calificación 2":^18}|{"Calificación 3":^18}|{"Promedio":^18}
+{"":-^90}""")
                     for estudiante in estudiantes_ordenados:
-                        print(estudiante)
+                        print(f"""{estudiante[0]:^14} {estudiante[1][0]:^18}  {estudiante[1][1]:^18}  {estudiante[1][2]:^18} {estudiante[2]:^18}
+{"":-^90}""")
                 if sub_opcion == 2:
                     estudiantes_ordenados = sorted(listaGlobal, key=lambda estudiante: estudiante[0], reverse=True)  # Ordenar por nombre descendente
                     print('Estudiantes ordenados por nombre:')
+                    print(f"""
+{"Nombre":^14}|{"Calificación 1":^18}|{"Calificación 2":^18}|{"Calificación 3":^18}|{"Promedio":^18}
+{"":-^90}""")
                     for estudiante in estudiantes_ordenados:
-                        print(estudiante)
+                        print(f"""{estudiante[0]:^14} {estudiante[1][0]:^18}  {estudiante[1][1]:^18}  {estudiante[1][2]:^18} {estudiante[2]:^18}
+{"":-^90}""")
             elif opcion == 2:
                 print('1.- En orden ascendente de menor a mayor')
                 print('2.- En orden descendente de mayor a menor')
@@ -131,13 +139,21 @@ while True:
                 if sub_opcion == 1:
                     estudiantes_ordenados = sorted(listaGlobal, key=lambda estudiante: estudiante[2])  # Ordenar por promedio
                     print('Estudiantes ordenados por promedio:')
+                    print(f"""
+{"Nombre":^14}|{"Calificación 1":^18}|{"Calificación 2":^18}|{"Calificación 3":^18}|{"Promedio":^18}
+{"":-^90}""")
                     for estudiante in estudiantes_ordenados:
-                        print(estudiante)
+                        print(f"""{estudiante[0]:^14} {estudiante[1][0]:^18}  {estudiante[1][1]:^18}  {estudiante[1][2]:^18} {estudiante[2]:^18}
+{"":-^90}""")
                 if sub_opcion == 2:
                     estudiantes_ordenados = sorted(listaGlobal, key=lambda estudiante: estudiante[2], reverse=True)  # Ordenar por promedio descendente
                     print('Estudiantes ordenados por promedio:')
+                    print(f"""
+{"Nombre":^14}|{"Calificación 1":^18}|{"Calificación 2":^18}|{"Calificación 3":^18}|{"Promedio":^18}
+{"":-^90}""")
                     for estudiante in estudiantes_ordenados:
-                        print(estudiante)
+                        print(f"""{estudiante[0]:^14} {estudiante[1][0]:^18}  {estudiante[1][1]:^18}  {estudiante[1][2]:^18} {estudiante[2]:^18}
+{"":-^90}""")
             elif opcion == 3:
                 break  # Salir del menú de ordenación
 
