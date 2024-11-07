@@ -17,10 +17,11 @@ while True:
     print("3.-Imprimir promedio mas alto")
     print("4.-Imprimir promedio mas bajo")
     print("5.-Imprimir estudiantes con promedio particular")
-    print("6.-Salir")
+    print("6.-Ordenar")
+    print("7.-Salir")
     opcion=int(input("Ingrese una de estas opciones "))
 
-    if opcion==6:
+    if opcion==7:
         break
 
     if opcion==1:
@@ -75,6 +76,13 @@ while True:
                 promedios.append(listaGlobal[i])
                 i+=1
         print(f'Los estudiantes con el promedio {particular} son {promedios}')
+
+
+
+
+
+    elif opcion==6:
+        print("")
         
 
 
