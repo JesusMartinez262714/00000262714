@@ -36,17 +36,21 @@ while True:
     # Opción para agregar un nuevo estudiante
     if opcion == 1:
         calificaciones = []
-        nombre = input(f'Ingrese el nombre del estudiante: ')
-        for alumno in listaGlobal:
-                id=int(input("Ingrese el ID del estudiante: "))
-                for x,y in alumno["ID"]:
-                    if id == x:
-                        print("YA HAY UN ALUMNO CON ESTA ID, INGRESE NUEVAMENTE: ")
-                        continue
-                    else:
-                        break
-           
-        
+        nombre = input('Ingrese el nombre del estudiante: ')
+        for intento in range(10000):  # Usamos un número alto de intentos para simular un bucle
+            id = input('Ingrese el ID del alumno: ')
+    
+            # Verificar si el ID ya existe en listaGlobal
+            id_existe = True
+            for alumno in listaGlobal:
+                if alumno["ID"] == id:
+                    print("YA EXISTE UN USUARIO CON ESTA ID, INTENTE NUEVAMENTE")
+                    id_existe = False
+                    break  # Salimos del for porque encontramos un ID duplicado
+    
+            # Si el ID es único, salimos del bucle
+            if id_existe==True:
+                break
 
         # Capturar calificaciones del estudiante
         for i in range(1, 4):
@@ -58,6 +62,7 @@ while True:
 
         # Calcular el promedio individual del estudiante
         promedio_individual = round(sum(calificaciones) / 3, 2)
+        calificaciones=tuple(calificaciones)
         alumno = {"ID":id,"nombre":nombre,"Calificacion":calificaciones,"Promedio":promedio_individual}  #diccionario con datos del estudiante
         listaGlobal.append(alumno)  # Agregar el estudiante a la lista global
         promedioTotal += promedio_individual  # Acumular el promedio en total
@@ -68,14 +73,10 @@ while True:
 
     # Opción para imprimir la lista de estudiantes y sus promedios
     elif opcion == 2:
-        print(f"""
-{"Nombre":^14}|{"Calificación 1":^18}|{"Calificación 2":^18}|{"Calificación 3":^18}|{"Promedio":^18}
-{"":-^90}""")
-        
-        # Iterar sobre la lista de estudiantes y mostrar sus datos
-        for estudiante in listaGlobal:
-            print(f"""{estudiante[0]:^14} {estudiante[1][0]:^18}  {estudiante[1][1]:^18}  {estudiante[1][2]:^18} {estudiante[2]:^18}
-{"":-^90}""")
+        for alumnos in listaGlobal:
+            for x,y in alumnos.items():
+                print(f"{x}: {y}")
+        print()
         
         # Calcular y mostrar el promedio general y la cantidad de aprobados
         if listaGlobal:  # Verificar que la lista no esté vacía
@@ -133,7 +134,7 @@ while True:
         for i in range(9999999):  # Ciclo para permitir múltiples selecciones
             print('1.- Organizar por nombre')
             print('2.- Organizar por promedio')
-            print("3.-Organizar por promedio")
+            print("3.-Organizar por ID")
             print('4.- Salir')
             opcion = int(input('Ingrese una opción: '))
             if opcion == 1:
@@ -185,6 +186,14 @@ while True:
                 print('1.- En orden ascendente')
                 print('2.- En orden descendente')
                 sub_opcion = int(input('Ingrese una opción: '))
+                if sub_opcion==1:
+                        estudiantes_ordenados=sorted(listaGlobal,key=lambda alumno:alumno["ID"])
+                        print("estudiantes ordenados por id ")
+                        print(estudiantes_ordenados)
+                if sub_opcion==2:
+                        estudiantes_ordenados=sorted(listaGlobal,key=lambda alumno:alumno["ID"],reverse=True)
+                        print("estudiantes ordenados por id ")
+                        print(estudiantes_ordenados)
 
 
 
