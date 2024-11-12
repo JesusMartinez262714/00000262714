@@ -61,7 +61,7 @@ for i in range(3):
             break
         else:
             fecha = input('Ingrese la fecha en la que se realizó el servicio: ')
-            servicios = [(servicio, fecha)]
+            servicios.append((servicio,fecha))
 
     nuevoRegistro = {
         'nombre': nombre,
