@@ -26,6 +26,19 @@ def calcularCosto(pan,cantidad):
 
 def listaCompras(pan,cantidad,precio):
     lista_Compras.append((pan,cantidad,precio))
+
+def imprimeRecibo():
+    suma_total=0
+    print(f""" {"La clasica":^35}
+{"":-^35}
+{"Cantidad":<15}{"Pan":<10}Total
+{"":-^35}""")
+    for posiscion in lista_Compras:
+        print(f"""{posiscion[0]:<15}{posiscion[1]:<10}${posiscion[2]}""")
+        suma_total+=posiscion[2]
+    print(f"""{"":-^35}
+                         ${suma_total}""")
+
     
 
 bandera=False
@@ -43,15 +56,6 @@ while True:
 if not bandera:
     print('No se registro ningun pedido')
 
-suma_total=0
-print(f""" {"La clasica":^35}
-{"":-^35}
-{"Cantidad":<15}{"Pan":<10}Total
-{"":-^35}""")
-for posiscion in lista_Compras:
-    print(f"""{posiscion[0]:<15}{posiscion[1]:<10}${posiscion[2]}""")
-    suma_total+=posiscion[2]
-print(f"""{"":-^35}
-                         ${suma_total}""")
 
+imprimeRecibo()
 
